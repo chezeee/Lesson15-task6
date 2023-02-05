@@ -15,8 +15,13 @@ class User {
 }
 
 class Admin extends User {
+  constructor(firstName, lastName, age, userType) {
+    super(firstName, lastName, age);
+    this.userType = userType;
+  }
+
   getFullName() {
-    return `${this.firstName} ${this.lastName} [admin]`;
+    return `${this.firstName} ${this.lastName} [${this.userType}]`;
   }
 
   updateConfig() {
